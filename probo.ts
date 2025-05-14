@@ -30,11 +30,11 @@ export function getAvailableQty(marketID:string): Promise<Depth> {
         axios.request(config)
         .then((response:any) => {
             let depth: Depth = {buy: {}, sell: {}};
-            Object.keys(response.data.data.available_qty).forEach((key:string) => {
+            Object.keys(response.data.data.available_qty.buy).forEach((key:string) => {
                 depth.buy[key] = response.data.data.available_qty.buy[key].toString();
 
             });
-            Object.keys(response.data.data.available_qty).forEach((key:string) => {
+            Object.keys(response.data.data.available_qty.sell).forEach((key:string) => {
                 depth.sell[key] = response.data.data.available_qty.sell[key].toString();
             });
             resolve(depth);

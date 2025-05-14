@@ -25,7 +25,7 @@ const clobClient = new ClobClient(host, Chain.POLYGON, signer, {
 });
 
 export async function approveAllowance(tokenId: string) {
-    console.log("approve al;l;owanceal;l;owanceal;l;owanceal;l;owanceal;l;owanceal;l;owanceal;l;owanceal;l;owanceal;l;owanceal;l;owanceal;l;owance")
+    //console.log("approve al;l;owanceal;l;owanceal;l;owanceal;l;owanceal;l;owanceal;l;owanceal;l;owanceal;l;owanceal;l;owanceal;l;owanceal;l;owance")
     const usdc = getUsdcContract(true, signer);
     const contractConfig = getContractConfig(Chain.POLYGON);
     
